@@ -1,15 +1,14 @@
-import Carteira from "./Carteira";
-import Gateway from "./Gateway";
-import Usuario from "./Usuario";
-import Remessa from "./Remessa";
-import ModalErrorMessage from "./modalErrorMessage";
-import ContratoBuscado from "./contratoBuscado";
-
+import EntitiesUsers from './EntitiesUsers';
+import EntitiesUserLogin from './EntitiesUserLogin';
+import EntitiesOneUser from './EntitiesOneUser';
+import EntitiesUrl from './EntitiesUrl';
+import EntitiesEntidadesEscolares from './EntitiesEntidadesEscolares';
+import EntitiesMetaBaseIframe from './EntitiesMetaBaseIframe';
 export {
-  Carteira,
-  Gateway,
-  Usuario,
-  Remessa,
-  ModalErrorMessage,
-  ContratoBuscado,
+  EntitiesUsers,
+  EntitiesUserLogin,
+  EntitiesOneUser,
+  EntitiesUrl,
+  EntitiesMetaBaseIframe,
+  EntitiesEntidadesEscolares
 };

@@ -1,6 +1,10 @@
 .table {
   display: flex;
   margin-top: 1em;
+  flex-direction: column;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .table table {
@@ -10,8 +14,8 @@
 
 .table th {
   border-collapse: collapse;
-  border-top: 1px solid #eaf0f7;
-  border-bottom: 2px solid #eaf0f7;
+  border-top: 1px solid var(--white-200);
+  border-bottom: 2px solid var(--white-200);
   padding: 1.1em;
   text-align: left;
   font-size: 0.8em;
@@ -21,13 +25,130 @@
   border-collapse: collapse;
   padding: 1.1em;
   font-size: 0.8em;
-  color: #7286a2;
+  color: var(--azul-tenro);
 }
 
 .odd {
-  background-color: #f1f5fa;
+  background-color: var(--white-300);
   border-collapse: collapse;
-  border: 1px solid #eaf0f7;
+  border: 1px solid var(--white-200);
   border-left: none;
   border-right: none;
+}
+.pagination {
+  display: flex;
+  margin-top: 0.5rem;
+  padding-left: 5em;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  all: unset;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  color: var(--white);
+  background-color: var(--verde-tech);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pagination button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.pagination button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.pagination button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--verde-tech);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.pagination button:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.boxInput {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inputFilter {
+  all: unset;
+  text-align: start;
+  width: 20%;
+  padding-left: 0.7rem;
+  height: 2rem;
+  font-size: 0.9em;
+  border-radius: 5px;
+  color: var(--gray-300);
+  border: 0.063em solid var(--gray-200);
+  cursor: text;
+}
+.inputSelect {
+  text-align: start;
+  width: 20%;
+  padding-left: 0.7rem;
+  font-size: 0.9em;
+  height: 2rem;
+  font-size: medium;
+  color: var(--gray-300);
+  background-color: var(--white);
+  border-radius: 5px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  cursor: pointer;
+}
+.inputFilter:focus-within,
+.inputSelect:focus-within {
+  box-shadow: 0 0 5px var(--gray-200);
+}
+.inputFilter:focus,
+.inputSelect:focus {
+  outline: transparent;
+}
+.pointer {
+  cursor: pointer;
+}
+.pointer:hover {
+  color: var(--verde-light);
+}
+.errorNotDados {
+  display: flex;
+  right: 100%;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.errorNotDadosSpan {
+  color: var(--red-300);
+}
+.conteinerItemsPerPg {
+  font-size: 0.9em;
+  color: var(--azul-tenro);
+}
+.selectItemPerPage {
+  cursor: pointer;
 }

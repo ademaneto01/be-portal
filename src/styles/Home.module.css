@@ -1,13 +1,29 @@
+.main {
+  height: calc(100vh - 4.5em);
+}
 .pageContainer {
   margin-top: 4.2em;
   display: flex;
-  margin-left: 17em;
+  margin-left: 16em;
   transition: margin-left 0.3s ease-out;
   padding: 2em;
-  font-family: "Roboto", sans-serif;
-  color: #303e67;
+  color: var(--azul-escuro);
+  height: 100%;
 }
 
 .expanded {
-  margin-left: 0;
+  margin-left: 4em;
+}
+
+.containerFundo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/fundo_alternativo2.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,44 +1,238 @@
 .pageContainer {
   width: 100%;
+  height: 100%;
   margin-bottom: 5em;
 }
 
 .pageContentContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 80%;
+  height: 95%;
+  width: 100%;
   margin-top: 1.7em;
   padding: 1.2em;
-  padding-bottom: 0;
+  padding-bottom: 0.9em;
+  margin-bottom: 2rem;
+}
+
+.boxToAlignBtns {
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .createButtonContainer {
-  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
+  margin-right: 0.6rem;
 }
 
 .createButton {
+  all: unset;
   display: flex;
-  border-radius: 3em;
-  height: 2.3em;
-  color: white;
-  background-color: #9ba7ca;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--white);
+  background-color: var(--verde-tech);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 10px var(--black-200);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.createButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.createButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.createButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  background: var(--verde-tech);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.createButton:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.createButtonTeste {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--blue-300);
+  background-color: var(--white);
   justify-content: center;
   align-items: center;
   padding: 1em 0.8em 1em 0.8em;
-  font-family: "Poppins", sans-serif;
   transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-  box-shadow: 0px 0.3em 1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0.3em 1em var(--black-200);
   user-select: none;
 }
 
 .createButton:hover {
-  box-shadow: 0px 0.1em 0em rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.createButtonTeste:hover {
+  cursor: pointer;
 }
 
-.createButton:hover {
+.backButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.6rem;
+}
+
+.backButton {
+  all: unset;
+  display: flex;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--black-200);
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  background-color: #8a98c1;
+  position: relative;
+  box-shadow: 0 5px 10px var(--black-200);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.backButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.backButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.backButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  background: var(--white);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.backButton:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.backButtonTeste {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--verde-tech);
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.8em 1em 0.8em;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  box-shadow: 0px 0.3em 1em var(--black-200);
+  user-select: none;
+}
+
+.backButton:hover {
+  cursor: pointer;
+}
+.backButtonTeste:hover {
+  cursor: pointer;
+}
+
+.deleteButton {
+  all: unset;
+  display: flex;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  margin-right: 0.63rem;
+  color: var(--white);
+  background-color: var(--red-300);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 10px var(--black-200);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.deleteButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.deleteButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.deleteButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  background: var(--red-300);
+  z-index: -1;
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.deleteButton:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.deleteButtonTeste {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--red-300);
+  background-color: var(--red-300);
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.8em 1em 0.8em;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out,
+    transform 0.3s ease-out;
+  box-shadow: 0px 0.3em 1em var(--black-200);
+  user-select: none;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+}
+.deleteButtonTeste:hover {
+  cursor: pointer;
 }

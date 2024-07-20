@@ -1,0 +1,824 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/Error.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.Error_errorComponent__ULRSk {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--red-300);
+  color: var(--red-300);
+  font-weight: bold;
+  background-color: var(--rose-200);
+  box-shadow: 0 2px 4px var(--black-200);
+  border-radius: 5px;
+  bottom: 2rem;
+  left: 2rem;
+  width: 16rem;
+  padding: 1rem;
+  z-index: 15;
+}
+.Error_infosComponent__0MCP6 {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--white-200);
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--gray-300);
+  box-shadow: 0 2px 4px var(--black-200);
+  border-radius: 5px;
+  bottom: 2rem;
+  left: 2rem;
+  width: 16rem;
+  padding: 1rem;
+  z-index: 15;
+}
+@keyframes Error_blink__Bsfm3 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.Error_loadingDot__2O7pk {
+  animation: Error_blink__Bsfm3 1.5s infinite;
+}
+
+.Error_loadingDot__2O7pk:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.Error_loadingDot__2O7pk:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.Error_loadingDot__2O7pk:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/Loader.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.Loader_container__rtr_s {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  
+}
+
+.Loader_loader___rb1F {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  border: 0.25em solid;
+  border-color: var(--white) var(--white) transparent transparent;
+  box-sizing: border-box;
+  animation: Loader_rotation__0EWVU 1s linear infinite;
+}
+.Loader_loader___rb1F::after,
+.Loader_loader___rb1F::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 0.25em solid;
+  border-color: transparent transparent var(--verde-tech) var(--verde-tech);
+  width: 2.3em;
+  height: 2.3em;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: Loader_rotationBack__5AovD 0.5s linear infinite;
+  transform-origin: center center;
+}
+.Loader_loader___rb1F::before {
+  width: 1.6em;
+  height: 1.6em;
+  border-color: var(--azul-tech) var(--azul-tech) transparent transparent;
+  animation: Loader_rotation__0EWVU 1.5s linear infinite;
+}
+
+@keyframes Loader_rotation__0EWVU {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Loader_rotationBack__5AovD {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/Page.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.Page_pageContainer__HZfws {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5em;
+}
+
+.Page_pageContentContainer__NsOow {
+  display: flex;
+  flex-direction: column;
+  min-height: 80%;
+  height: 95%;
+  width: 100%;
+  margin-top: 1.7em;
+  padding: 1.2em;
+  padding-bottom: 0.9em;
+  margin-bottom: 2rem;
+}
+
+.Page_boxToAlignBtns__Dc0g8 {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.Page_createButtonContainer__u0pUJ {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.6rem;
+}
+
+.Page_createButton__wl3je {
+  all: unset;
+  display: flex;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--white);
+  background-color: var(--verde-tech);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 10px var(--black-200);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Page_createButton__wl3je:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.Page_createButton__wl3je:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.Page_createButton__wl3je::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  background: var(--verde-tech);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.Page_createButton__wl3je:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.Page_createButtonTeste__Q2OZS {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--blue-300);
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.8em 1em 0.8em;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  box-shadow: 0px 0.3em 1em var(--black-200);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.Page_createButton__wl3je:hover {
+  cursor: pointer;
+}
+.Page_createButtonTeste__Q2OZS:hover {
+  cursor: pointer;
+}
+
+.Page_backButtonContainer__JyVPX {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.6rem;
+}
+
+.Page_backButton__fhxUN {
+  all: unset;
+  display: flex;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--black-200);
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 10px var(--black-200);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Page_backButton__fhxUN:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.Page_backButton__fhxUN:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.Page_backButton__fhxUN::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  background: var(--white);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.Page_backButton__fhxUN:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.Page_backButtonTeste__6FqjT {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--verde-tech);
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.8em 1em 0.8em;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  box-shadow: 0px 0.3em 1em var(--black-200);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.Page_backButton__fhxUN:hover {
+  cursor: pointer;
+}
+.Page_backButtonTeste__6FqjT:hover {
+  cursor: pointer;
+}
+
+.Page_deleteButton__Y8hqZ {
+  all: unset;
+  display: flex;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  margin-right: 0.63rem;
+  color: var(--white);
+  background-color: var(--red-300);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 10px var(--black-200);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.Page_deleteButton__Y8hqZ:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--black-200);
+}
+
+.Page_deleteButton__Y8hqZ:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--black-200);
+}
+
+.Page_deleteButton__Y8hqZ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  background: var(--red-300);
+  z-index: -1;
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.Page_deleteButton__Y8hqZ:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.Page_deleteButtonTeste__NifQo {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--red-300);
+  background-color: var(--red-300);
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.8em 1em 0.8em;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out,
+    transform 0.3s ease-out;
+  box-shadow: 0px 0.3em 1em var(--black-200);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.Page_deleteButton__Y8hqZ:hover {
+  cursor: pointer;
+}
+.Page_deleteButtonTeste__NifQo:hover {
+  cursor: pointer;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/Shared.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.Shared_shadowBorder__ZSitT {
+  box-shadow: 0px 4px 16px var(--black-14);
+  border-radius: 7px;
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/PageLoader.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.PageLoader_container__GhwaT {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--gray-300);
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/ModalForm.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.ModalForm_background__cAj0D {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--gray-202);
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.ModalForm_container__yOw27 {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 43rem;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 10px var(--black-200);
+  z-index: 8;
+}
+
+.ModalForm_buttonContainer__Spsb_ {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.ModalForm_confirmButton__BpBkV,
+.ModalForm_cancelButton__oxDsT {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 0px var(--black-200);
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}
+
+.ModalForm_confirmButton__BpBkV {
+  background-color: var(--verde-learn);
+  color: var(--white);
+}
+
+.ModalForm_cancelButton__oxDsT {
+  background-color: var(--red-300);
+  color: var(--white);
+}
+
+.ModalForm_confirmButton__BpBkV:hover,
+.ModalForm_cancelButton__oxDsT:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 25px 0px var(--black-200);
+}
+
+.ModalForm_confirmButton__BpBkV:active,
+.ModalForm_cancelButton__oxDsT:active {
+  transform: translateY(0);
+  box-shadow: 0px 6px 12px 0px var(--black-200);
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/InputStandard.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.InputStandard_labelStandard__no4l8 {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.InputStandard_inputStandard__Wn7KW {
+  all: unset;
+  text-align: start;
+  width: 100%;
+  padding-left: 0.7rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  margin-top: 0.2rem;
+  color: var(--azul-tenro);
+  cursor: text;
+}
+.InputStandard_inputStandardError__BxLNF {
+  all: unset;
+  text-align: start;
+  width: 100%;
+  padding-left: 0.7rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--red-300);
+  margin-top: 0.2rem;
+  cursor: text;
+}
+.InputStandard_inputStandard__Wn7KW:focus-within {
+  box-shadow: 0 0 5px var(--gray-200);
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/InputSelect.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.InputSelect_inputSelect__0nvvI {
+  text-align: start;
+  width: 100%;
+  padding-left: 0.7rem;
+  height: 2.5rem;
+  color: var(--azul-tenro);
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  margin-top: 0.2rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  overflow-y: auto;
+}
+
+.InputSelect_inputSelect__0nvvI:focus-within {
+  box-shadow: 0 0 5px var(--gray-200);
+}
+
+.InputSelect_inputSelect__0nvvI:focus {
+  outline: transparent;
+  border: 1px solid var(--verde-learn);
+}
+
+.InputSelect_inputSelect__0nvvI::-webkit-scrollbar {
+  width: 8px;
+}
+
+.InputSelect_inputSelect__0nvvI::-webkit-scrollbar-track {
+  background: rgb(210, 240, 244);
+}
+
+.InputSelect_inputSelect__0nvvI::-webkit-scrollbar-thumb {
+  background: var(--verde-learn-light);
+  border-radius: 4px;
+}
+
+.InputSelect_inputSelect__0nvvI::-webkit-scrollbar-thumb:hover {
+  background: var(--verde-learn-light);
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/CheckboxGroup.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.CheckboxGroup_checkboxGroup__hYyFF {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background-color: var(--white);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.CheckboxGroup_checkboxGroup__hYyFF::-webkit-scrollbar {
+  width: 8px;
+}
+
+.CheckboxGroup_checkboxGroup__hYyFF::-webkit-scrollbar-track {
+  background: rgb(210, 240, 244);
+}
+
+.CheckboxGroup_checkboxGroup__hYyFF::-webkit-scrollbar-thumb {
+  background: var(--verde-learn-light);
+  border-radius: 4px;
+}
+
+.CheckboxGroup_checkboxGroup__hYyFF::-webkit-scrollbar-thumb:hover {
+  background: var(--verde-learn-light);
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ:hover {
+  background-color: var(--gray-200);
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ input {
+  margin-right: 0.75rem;
+  width: 20px;
+  height: 20px;
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--verde-learn); 
+  outline: none;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ input[type="checkbox"]:checked {
+  background-color: var(--verde-learn);
+  border-color: var(--verde-learn);
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ input[type="checkbox"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 45%; 
+  left: 50%; 
+  transform: translate(-50%, -50%) rotate(45deg); 
+  width: 5px;
+  height: 10px;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  transition: background-color 0.3s;
+  opacity: 0;
+}
+
+.CheckboxGroup_checkboxLabel__gyxnQ input[type="checkbox"]:checked::before {
+  opacity: 1; 
+  border-color: var(--white);
+}
+
+
+
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/styles/Login.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+@media screen and (max-width: 48rem) {
+  .Login_containerMain__x0gPL {
+    width: 90%;
+    min-width: 12.5rem;
+    height: 35%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .Login_containerMain__x0gPL {
+    width: 90%;
+    min-width: 12.5rem;
+    height: 35%;
+  }
+}
+
+.Login_containerFundo__NH_Qb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/fundo_alternativo2.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Login_logoContainer__nQUqA {
+  position: absolute;
+  left: 50%;
+  top: 13%;
+  transform: translate(-50%, -50%);
+  width: 10em;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login_logo__LXB1t {
+  height: 110%;
+  width: 200%;
+  aspect-ratio: 2;
+}
+
+.Login_formLogin__DXr6z {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2.5rem;
+  width: 23em;
+  background-color: var(--white);
+  padding: 1rem 3rem 0rem 3rem;
+  margin-top: 8rem;
+  box-shadow: 0rem 0rem 1.25rem 0rem var(--black-200);
+  gap: 1.5em;
+}
+
+.Login_labelLogin__vay83 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Login_inputLogin__HDeDg {
+  all: unset;
+  text-align: start;
+  width: 100%;
+  padding-left: 0.7rem;
+  height: 2.5rem;
+  border-radius: 0.3125rem;
+  border: 1px solid var(--gray-200);
+  margin-top: 0.2rem;
+  cursor: text;
+}
+
+.Login_groupForm__ia3Ty {
+  width: 100%;
+}
+
+.Login_btnLoginContainer__fqx_a {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.6rem;
+}
+
+.Login_btnLogin__SSnGn {
+  all: unset;
+  display: flex;
+  border-radius: 6.25rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--white);
+  background-color: var(--verde-learn);
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0.3125rem 0.63rem var(--black-200);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Login_btnLogin__SSnGn:hover {
+  transform: translateY(-0.1875rem);
+  box-shadow: 0 0.63rem 1.25rem var(--black-200);
+}
+
+.Login_btnLogin__SSnGn:active {
+  transform: translateY(-0.063rem);
+  box-shadow: 0 0.3125rem 0.63rem var(--black-200);
+}
+
+.Login_btnLogin__SSnGn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6.25rem;
+  border: 0.125rem;
+  border-color: var(--verde-light);
+  background: var(--verde-learn);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.Login_btnLogin__SSnGn:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.Login_btnLoginTeste__mn5Qs {
+  display: flex;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 8rem;
+  color: var(--blue-300);
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.8em 1em 0.8em;
+  font-family: 'Poppins', sans-serif;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  box-shadow: 0rem 0.19rem 0.63rem var(--black-200);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.Login_btnLogin__SSnGn:hover {
+  cursor: pointer;
+}
+
+.Login_btnLoginTeste__mn5Qs:hover {
+  cursor: pointer;
+}
+
+.Login_boxWarning__yV6Yk {
+  text-align: center;
+  height: 2.5rem;
+  padding-bottom: 3em;
+}
+
+.Login_error__EPoxl {
+  margin-bottom: 1em;
+  color: var(--red-300);
+}
+.Login_boxLoaderLogin__AD38H {
+  height: 3.3em;
+}
+.Login_title__BQPlY {
+  font-size: 2rem;
+}
+

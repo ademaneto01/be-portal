@@ -1,5 +1,3 @@
-import BackendApiMock from "./backendApiMock";
-
-const backendApi = new BackendApiMock();
-
-export default backendApi;
+import BackendApiPost from './backendApiPost';
+import BackendApiGet from './backendApiGet';
+export { BackendApiPost, BackendApiGet };
