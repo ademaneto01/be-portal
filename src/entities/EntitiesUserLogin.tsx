@@ -5,6 +5,7 @@ interface UserProps {
     token: string;
     perfil: string;
     id_ee: string;
+    
   }
   
   export default class EntitiesUserLogin {
