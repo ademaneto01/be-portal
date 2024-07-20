@@ -1,0 +1,33 @@
+.table {
+  display: flex;
+  margin-top: 1em;
+}
+
+.table table {
+  border-collapse: collapse;
+  flex-grow: 1;
+}
+
+.table th {
+  border-collapse: collapse;
+  border-top: 1px solid #eaf0f7;
+  border-bottom: 2px solid #eaf0f7;
+  padding: 1.1em;
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.table td {
+  border-collapse: collapse;
+  padding: 1.1em;
+  font-size: 0.8em;
+  color: #7286a2;
+}
+
+.odd {
+  background-color: #f1f5fa;
+  border-collapse: collapse;
+  border: 1px solid #eaf0f7;
+  border-left: none;
+  border-right: none;
+}
