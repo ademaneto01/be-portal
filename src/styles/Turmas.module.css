@@ -1,0 +1,41 @@
+.boxButtonsNav {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 1.7em;
+  margin-bottom: -1.7em;
+}
+.boxButtonsNav button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.87em;
+  color: var(--gray-300);
+  width: 10rem;
+  height: 2rem;
+}
+#classSelected {
+  border-bottom: 0.1rem solid var(--black-24);
+  font-weight: bold;
+  width: 10rem;
+}
+.boxBtns {
+  display: flex;
+  justify-content: flex-end;
+}
+.pageContainer {
+  width: 100%;
+  height: 110%;
+  margin-bottom: 5em;
+}
+.boxInfosContrato {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  margin-top: 1rem;
+}
+.msgInfosContratoNotFound {
+  color: var(--red-300);
+  margin-top: 3rem;
+}

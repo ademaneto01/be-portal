@@ -1,0 +1,325 @@
+.conteinerForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+
+  transition: width 0.3s ease;
+}
+
+.expanded {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 2em;
+  transition: width 0.3s ease;
+}
+
+.inputRange {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  width: 100%;
+  gap: 1em;
+}
+
+.expandedRange {
+  display: none;
+}
+.rangesClass {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin-top: 5em;
+  gap: 2em;
+  border-radius: 5px;
+  background-color: var(--gray-202);
+}
+.expandeBoxRanges {
+  display: none;
+}
+.btnToogleClose {
+  all: unset;
+  height: 2em;
+  margin-top: 2em;
+  cursor: pointer;
+}
+.conteinerObservation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 45%;
+  padding: 1em 2em 1em 1em;
+  border-radius: 5px;
+  background-color: var(--gray-202);
+}
+.conteinerWidthAll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 93.5%;
+
+  padding: 1em 2em 1em 1em;
+  border-radius: 5px;
+  background-color: var(--gray-202);
+}
+
+.boxToAlignTitleLearning {
+  display: flex;
+  flex-direction: column;
+  border: 'white';
+  gap: 1em;
+  align-items: center;
+}
+.conteinerLearning {
+  display: flex;
+  width: 100%;
+  gap: 2em;
+}
+.boxLearning {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.conteinerObsCycle {
+  display: flex;
+  width: 100%;
+  gap: 2em;
+}
+.boxStatus {
+  width: 15em;
+}
+.labelStandard {
+  gap: 0.2rem;
+}
+
+.inputStandard {
+  all: unset;
+  text-align: start;
+  width: 100%;
+  padding-left: 0.7rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  margin-top: 0.2rem;
+  background-color: var(--white);
+  cursor: text;
+}
+
+.confirmButtonFinal,
+.confirmButton,
+.cancelButton {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 0px var(--black-200);
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}
+
+.confirmButton {
+  background-color: var(--verde-learn);
+  color: var(--white);
+}
+.confirmButtonFinal {
+  background-color: var(--azul-tech);
+  color: var(--white);
+}
+.cancelButton {
+  background-color: var(--red-300);
+  color: var(--white);
+}
+
+.confirmButtonFinal:hover,
+.confirmButton:hover,
+.cancelButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 25px 0px var(--black-200);
+}
+
+.confirmButtonFinal:active,
+.confirmButton:active,
+.cancelButton:active {
+  transform: translateY(0);
+  box-shadow: 0px 6px 12px 0px var(--black-200);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.inputSelect {
+  text-align: start;
+  width: 101%;
+  padding-left: 0.7rem;
+  height: 2.5rem;
+  max-height: 3rem;
+  overflow-y: visible;
+  color: var(--azul-tenro);
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--gray-200);
+  margin-top: 0.2rem;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.inputSelect:focus-within {
+  box-shadow: 0 0 5px var(--gray-200);
+}
+.inputSelect:focus {
+  outline: transparent;
+}
+
+.searchSelectContainer {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  width: 250px;
+  cursor: pointer;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.optionsContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #beb1b1;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.scrollableOptionsContainer {
+  margin-top: 0.5em;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.optionItem {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.optionItem:hover {
+  background-color: #f0f0f0;
+}
+.boxsearchInput {
+  display: flex;
+  align-items: center;
+  padding-right: 3px;
+  cursor: pointer;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+}
+.searchInputSelect {
+  all: unset;
+  width: 100%;
+  padding: 8px;
+  border-bottom: 0.03em solid black;
+  box-sizing: border-box;
+  outline: none;
+  cursor: auto;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: flex-start;
+}
+.divDataObsertavion {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  padding: 3px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 101%;
+}
+
+.inputDataObservation {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.boxToHiddenForms {
+  display: flex;
+}
+
+.slider {
+  width: 100%;
+  margin: auto;
+  color: var(--azul-tenro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb {
+  cursor: pointer;
+  position: absolute;
+  height: 0.5em;
+  background: var(--azul-tenro);
+  border: 0.4em solid var(--azul-tenro);
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+
+.track {
+  position: relative;
+  background: var(--azul-tenro);
+  border: 2px solid transparent;
+}
+
+.slider .track {
+  top: 0.8em;
+  height: 0.3em;
+  border-radius: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider .thumb {
+  outline: none;
+  width: 1em;
+  height: 1em;
+}
+.containerFinalComments {
+  overflow-wrap: break-word;
+}
+.logoCSS {
+  background-image: linear-gradient(
+    to right,
+    red 0%,
+    yellow 35%,
+    yellow 65%,
+    green 100%
+  );
+  width: 100%;
+  border-radius: 10px;
+  height: 0.7em;
+}

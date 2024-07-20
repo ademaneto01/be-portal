@@ -1,20 +1,16 @@
-import { PageEnum } from "@/enums";
-import styles from "@/styles/SideNavBar.module.css";
-import { Dispatch, SetStateAction } from "react";
-import { IconType } from "react-icons";
-import { HiOutlineSearch } from "react-icons/hi";
-import {
-  TfiBarChart,
-  TfiBriefcase,
-  TfiLock,
-  TfiSettings,
-  TfiUser,
-} from "react-icons/tfi";
-import { FaBarcode } from "react-icons/fa";
-import SideNavBarButton from "./SideNavBarButton";
+import { PageEnum } from '@/enums';
+import React from 'react';
+import styles from '@/styles/SideNavBar.module.css';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { IconType } from 'react-icons';
+import { RiComputerFill, RiComputerLine } from 'react-icons/ri';
+import SideNavBarButton from './SideNavBarButton';
+import { BackendApiGet } from '@/backendApi';
+import { ErrorComponent } from '@/errors';
+import handleApiErrors from '@/utils/HandleApiErrors';
 
-function reactIcon(icon: IconType): JSX.Element {
-  return icon({ style: { fontSize: "1.15em" } });
+function reactIcon(icon: IconType, color?: string): JSX.Element {
+  return icon({ style: { fontSize: '1.3em', color: color } });
 }
 
 interface SideNavBarProps {
@@ -24,8 +20,31 @@ interface SideNavBarProps {
 }
 
 export default function SideNavBar(props: SideNavBarProps) {
+  const [perfil, setPerfil] = useState('');
+  const [error, setError] = useState(false);
+  const [msgError, setMsgError] = useState('');
+
+  useEffect(() => {
+    const token = localStorage.getItem('auth_token');
+    const uid = localStorage.getItem('uid');
+    const backendApi = new BackendApiGet(`${token}`);
+    const fetchUserData = async () => {
+      try {
+        const user = await backendApi.localizarUsuario(uid);
+
+        if (user && user.length > 0) {
+          setPerfil(user[0].perfil || '');
+        }
+      } catch (error: any) {
+        handleApiErrors(error, setError, setMsgError);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
   function hidable(style: string): string {
-    return style + (props.hidden ? ` ${styles.hidden}` : "");
+    return style + (props.hidden ? ` ${styles.hidden}` : '');
   }
 
   function isActive(page: PageEnum): boolean {
@@ -36,58 +55,21 @@ export default function SideNavBar(props: SideNavBarProps) {
     <div className={hidable(styles.navBar)}>
       <div className={styles.buttonsContainer}>
         <SideNavBarButton
-          text="Dashboard"
-          onClick={() => props.setPage(PageEnum.dashboard)}
-          icon={reactIcon(TfiBarChart)}
-          active={isActive(PageEnum.dashboard)}
-        />
-        <SideNavBarButton
-          text="Carteiras"
+          text="Painel de Acompanhamento"
           onClick={() => {
-            props.setPage(PageEnum.carteiras);
+            props.setPage(PageEnum.digitalResources);
           }}
-          icon={reactIcon(TfiBriefcase)}
-          active={isActive(PageEnum.carteiras)}
-        />
-        <SideNavBarButton
-          text="Gateways"
-          onClick={() => {
-            props.setPage(PageEnum.gateways);
-          }}
-          icon={reactIcon(TfiSettings)}
-          active={isActive(PageEnum.gateways)}
-        />
-        <SideNavBarButton
-          text="Usuários"
-          onClick={() => {
-            props.setPage(PageEnum.usuarios);
-          }}
-          icon={reactIcon(TfiUser)}
-          active={isActive(PageEnum.usuarios)}
-        />
-        <SideNavBarButton
-          text="Remessa/Retorno"
-          onClick={() => {
-            props.setPage(PageEnum.remessaRetorno);
-          }}
-          icon={reactIcon(FaBarcode)}
-          active={isActive(PageEnum.remessaRetorno)}
-        />
-        <SideNavBarButton
-          text="Busca de contratos"
-          onClick={() => {
-            props.setPage(PageEnum.buscaDeContratos);
-          }}
-          icon={reactIcon(HiOutlineSearch)}
-          active={isActive(PageEnum.buscaDeContratos)}
-        />
-        <SideNavBarButton
-          text="Logout"
-          onClick={() => {}}
-          icon={reactIcon(TfiLock)}
-          active={false}
+          icon={
+            isActive(PageEnum.digitalResources)
+              ? reactIcon(RiComputerFill)
+              : reactIcon(RiComputerLine)
+          }
+          buttonHidden={props.hidden && perfil === 'Escola'}
+          active={isActive(PageEnum.digitalResources)}
+          hidden={perfil === 'Escola' ? true : false}
         />
       </div>
+      {error && <ErrorComponent message={msgError} />}
     </div>
   );
 }

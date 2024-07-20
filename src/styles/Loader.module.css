@@ -1,7 +1,8 @@
 .container {
   display: flex;
   justify-content: center;
-  margin: 6em;
+  padding: 1em;
+  
 }
 
 .loader {
@@ -11,13 +12,13 @@
   display: inline-block;
   position: absolute;
   border: 0.25em solid;
-  border-color: #eb7fe0 #eb7fe0 transparent transparent;
+  border-color: var(--white) var(--white) transparent transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 .loader::after,
 .loader::before {
-  content: "";
+  content: '';
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -26,7 +27,7 @@
   bottom: 0;
   margin: auto;
   border: 0.25em solid;
-  border-color: transparent transparent #8b5fba #8b5fba;
+  border-color: transparent transparent var(--verde-tech) var(--verde-tech);
   width: 2.3em;
   height: 2.3em;
   border-radius: 50%;
@@ -37,7 +38,7 @@
 .loader::before {
   width: 1.6em;
   height: 1.6em;
-  border-color: #eb7fe0 #eb7fe0 transparent transparent;
+  border-color: var(--azul-tech) var(--azul-tech) transparent transparent;
   animation: rotation 1.5s linear infinite;
 }
 

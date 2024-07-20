@@ -1,0 +1,35 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--gray-202);
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 75%;
+  height: 85%;
+  box-shadow: 0 0 10px var(--black-200);
+  z-index: 8;
+}
+
+.boxBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  height: 2rem;
+}
+
+.btnClose {
+  all: unset;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
